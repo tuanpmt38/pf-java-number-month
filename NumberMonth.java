@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class NumberMonth {
     public static void main(String[] args) {
         int month;
