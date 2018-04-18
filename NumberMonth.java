@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class NumberMonth {
     public static void main(String[] args) {
         int month;
@@ -28,7 +29,12 @@ public class NumberMonth {
                 int year;
                 System.out.println("Mời bạn nhập năm: ");
                 year = scanner.nextInt();
-                if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+
+                int isDivisibleBy4 = year % 4;
+                int isDivisibleBy400 = year % 100;
+                int isDivisibleBy100 = year % 400;
+
+                if ((isDivisibleBy4 == 0 && isDivisibleBy100 == 0) || (isDivisibleBy400 == 0)) {
                     System.out.println("Tháng " + month + " năm " + year + " có 29 ngày.");
                 } else {
                     System.out.println("Tháng " + month + " năm " + year + " có 28 ngày.");
